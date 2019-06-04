@@ -30,67 +30,6 @@
       "cell_type": "markdown",
       "metadata": {
         "colab_type": "text",
-        "id": "5fCEDCU_qrC0"
-      },
-      "source": [
-        "<p><img alt=\"Colaboratory logo\" height=\"45px\" src=\"https://colab.research.google.com/img/colab_favicon.ico\" align=\"left\" hspace=\"10px\" vspace=\"0px\"></p>\n",
-        "\n",
-        "<h1>Welcome to Colaboratory!</h1>\n",
-        "\n",
-        "\n",
-        "Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely in the cloud.\n",
-        "\n",
-        "With Colaboratory you can write and execute code, save and share your analyses, and access powerful computing resources, all for free from your browser."
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "cellView": "form",
-        "colab_type": "code",
-        "id": "xitplqMNk_Hc",
-        "outputId": "ed4f60d2-878d-4056-c438-352dac39a112",
-        "colab": {
-          "height": 420
-        }
-      },
-      "source": [
-        "#@title Introducing Colaboratory\n",
-        "#@markdown This 3-minute video gives an overview of the key features of Colaboratory:\n",
-        "from IPython.display import YouTubeVideo\n",
-        "YouTubeVideo('inN8seMm7UI', width=600, height=400)"
-      ],
-      "execution_count": 0,
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "data": {
-            "text/html": [
-              "\n",
-              "        <iframe\n",
-              "            width=\"600\"\n",
-              "            height=\"400\"\n",
-              "            src=\"https://www.youtube.com/embed/inN8seMm7UI\"\n",
-              "            frameborder=\"0\"\n",
-              "            allowfullscreen\n",
-              "        ></iframe>\n",
-              "        "
-            ],
-            "text/plain": [
-              "<IPython.lib.display.YouTubeVideo at 0x7f956e9dda50>"
-            ]
-          },
-          "metadata": {
-            "tags": []
-          },
-          "execution_count": 0
-        }
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "colab_type": "text",
         "id": "GJBs_flRovLc"
       },
       "source": [
@@ -106,41 +45,108 @@
       "metadata": {
         "colab_type": "code",
         "id": "gJr_9dXGpJ05",
-        "outputId": "5626194c-e802-4293-942d-2908885c3c1f",
+        "outputId": "251cd3b5-ccc6-44a5-8cb5-2e53144c7a13",
         "colab": {
-          "height": 35
+          "base_uri": "https://localhost:8080/",
+          "height": 119
         }
       },
       "source": [
-        "seconds_in_a_day = 24 * 60 * 60\n",
-        "seconds_in_a_day"
+        "!git clone https://github.com/Simplilearn-Edu/Machine-Learning--Projects.git"
       ],
-      "execution_count": 0,
+      "execution_count": 1,
       "outputs": [
         {
-          "output_type": "execute_result",
-          "data": {
-            "text/plain": [
-              "86400"
-            ]
-          },
-          "metadata": {
-            "tags": []
-          },
-          "execution_count": 0
+          "output_type": "stream",
+          "text": [
+            "Cloning into 'Machine-Learning--Projects'...\n",
+            "remote: Enumerating objects: 50, done.\u001b[K\n",
+            "remote: Counting objects: 100% (50/50), done.\u001b[K\n",
+            "remote: Compressing objects: 100% (46/46), done.\u001b[K\n",
+            "remote: Total 50 (delta 0), reused 0 (delta 0), pack-reused 0\n",
+            "Unpacking objects: 100% (50/50), done.\n"
+          ],
+          "name": "stdout"
         }
       ]
     },
     {
-      "cell_type": "markdown",
+      "cell_type": "code",
       "metadata": {
-        "colab_type": "text",
-        "id": "2fhs6GZ4qFMx"
+        "id": "j8dyt_CQd01m",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "4c40b7b0-c1d6-4bb2-b5a1-4000818c702e"
       },
       "source": [
-        "To execute the code in the above cell, select it with a click and then either press the ▷ button to the left of the code, or use the keyboard shortcut \"⌘/Ctrl+Enter\".\n",
-        "\n",
-        "All cells modify the same global state, so variables that you define by executing a cell can be used in other cells:"
+        "!ls Machine-Learning--Projects/Projects/'Projects for Submission'/'Project 2 - Income Qualification'"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "'Dataset for the project.zip'  'Income Qualification.txt'\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "jCJkLdD9efmQ",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 85
+        },
+        "outputId": "102ba251-0045-46e9-8344-718a732ab1d1"
+      },
+      "source": [
+        "!unzip Machine-Learning--Projects/Projects/'Projects for Submission'/'Project 2 - Income Qualification'/'Dataset for the project.zip'"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Archive:  Machine-Learning--Projects/Projects/Projects for Submission/Project 2 - Income Qualification/Dataset for the project.zip\n",
+            "   creating: Dataset for the project/\n",
+            "  inflating: Dataset for the project/test.csv  \n",
+            "  inflating: Dataset for the project/train.csv  \n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "VKOPw9KAenmf",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "c14e7402-ee48-472f-9b7e-f0327c3e51ce"
+      },
+      "source": [
+        "#!mv 'Dataset for the project' data\n",
+        "!ls data"
+      ],
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "test.csv  train.csv\n"
+          ],
+          "name": "stdout"
+        }
       ]
     },
     {
