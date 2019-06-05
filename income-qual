@@ -52,7 +52,7 @@
       "source": [
         "!git clone https://github.com/Simplilearn-Edu/Machine-Learning--Projects.git"
       ],
-      "execution_count": 4,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
@@ -82,7 +82,7 @@
       "source": [
         "!ls Machine-Learning--Projects/Projects/'Projects for Submission'/'Project 2 - Income Qualification'"
       ],
-      "execution_count": 5,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
@@ -107,7 +107,7 @@
       "source": [
         "!unzip Machine-Learning--Projects/Projects/'Projects for Submission'/'Project 2 - Income Qualification'/'Dataset for the project.zip'"
       ],
-      "execution_count": 6,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
@@ -136,7 +136,7 @@
         "!mv 'Dataset for the project' data\n",
         "!ls data"
       ],
-      "execution_count": 7,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
@@ -197,11 +197,11 @@
       "metadata": {
         "id": "P1RN8vlTW9wi",
         "colab_type": "code",
+        "outputId": "f4bb299b-2bb8-4807-e6ed-fd391545e1e8",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 224
-        },
-        "outputId": "f4bb299b-2bb8-4807-e6ed-fd391545e1e8"
+        }
       },
       "source": [
         "pd.options.display.max_columns = 150\n",
@@ -211,7 +211,7 @@
         "test = pd.read_csv('data/test.csv')\n",
         "train.head()"
       ],
-      "execution_count": 9,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -1293,16 +1293,16 @@
       "metadata": {
         "id": "-rGL9NmnXGfb",
         "colab_type": "code",
+        "outputId": "1b1e6711-f19c-48b2-f895-659e4a752744",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 102
-        },
-        "outputId": "1b1e6711-f19c-48b2-f895-659e4a752744"
+        }
       },
       "source": [
         "train.info()"
       ],
-      "execution_count": 10,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
@@ -1334,16 +1334,16 @@
       "metadata": {
         "id": "3YPjVzYOXI0_",
         "colab_type": "code",
+        "outputId": "8bbc3a69-4344-498b-895d-863b77e2bcc2",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 102
-        },
-        "outputId": "8bbc3a69-4344-498b-895d-863b77e2bcc2"
+        }
       },
       "source": [
         "test.info()"
       ],
-      "execution_count": 11,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
@@ -1376,11 +1376,11 @@
       "metadata": {
         "id": "2j8iALy6YnJ6",
         "colab_type": "code",
+        "outputId": "054a73b8-d6e2-41cd-959c-e9e9fe6bce53",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 457
-        },
-        "outputId": "054a73b8-d6e2-41cd-959c-e9e9fe6bce53"
+        }
       },
       "source": [
         "train.select_dtypes(np.int64).nunique().value_counts().sort_index().plot.bar(color = 'blue', \n",
@@ -1389,7 +1389,7 @@
         "plt.xlabel('Number of Unique Values'); plt.ylabel('Count');\n",
         "plt.title('Count of Unique Values in Integer Columns');"
       ],
-      "execution_count": 13,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "display_data",
@@ -1435,11 +1435,11 @@
       "metadata": {
         "id": "0nkEx8RVaDT5",
         "colab_type": "code",
+        "outputId": "30377c2b-93ef-47a3-d5f5-316f1938baeb",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 2335
-        },
-        "outputId": "30377c2b-93ef-47a3-d5f5-316f1938baeb"
+        }
       },
       "source": [
         "plt.figure(figsize = (20, 16))\n",
@@ -1462,7 +1462,7 @@
         "\n",
         "plt.subplots_adjust(top = 2)"
       ],
-      "execution_count": 15,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "display_data",
@@ -1493,16 +1493,16 @@
       "metadata": {
         "id": "sLnmYq9gaGgq",
         "colab_type": "code",
+        "outputId": "be029af5-6f1e-4b93-fefc-f4b01f7ae054",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 204
-        },
-        "outputId": "be029af5-6f1e-4b93-fefc-f4b01f7ae054"
+        }
       },
       "source": [
         "train.select_dtypes('object').head()"
       ],
-      "execution_count": 24,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -1615,16 +1615,16 @@
       "metadata": {
         "id": "cll_z7IYcBSl",
         "colab_type": "code",
+        "outputId": "d78f4883-0349-48ca-b8e7-c9e79fd282de",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 297
-        },
-        "outputId": "d78f4883-0349-48ca-b8e7-c9e79fd282de"
+        }
       },
       "source": [
         "train[['dependency', 'edjefa', 'edjefe']].describe()"
       ],
-      "execution_count": 19,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -1775,11 +1775,11 @@
       "metadata": {
         "id": "eNnozX62cn1m",
         "colab_type": "code",
+        "outputId": "6145eeff-628d-48e2-b382-109918de4023",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 611
-        },
-        "outputId": "6145eeff-628d-48e2-b382-109918de4023"
+        }
       },
       "source": [
         "heads = data.loc[data['parentesco1'] == 1].copy()\n",
@@ -1803,7 +1803,7 @@
         "\n",
         "label_counts"
       ],
-      "execution_count": 21,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -1842,7 +1842,7 @@
         "colab_type": "text"
       },
       "source": [
-        "# Identifying errors first and creating a correction logic for each error"
+        "# Identifying errors, and Cleaning data"
       ]
     },
     {
@@ -1850,6 +1850,16 @@
       "metadata": {
         "id": "xUgDKH9efxUG",
         "colab_type": "text"
+      },
+      "source": [
+        "### first thing is checking and correcting whether all members of the house have the same poverty level."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "X1Sol6qqh2V6"
       },
       "source": [
         "# 1\n",
@@ -1860,13 +1870,13 @@
     {
       "cell_type": "code",
       "metadata": {
-        "id": "hjgnjtZCetzD",
         "colab_type": "code",
+        "outputId": "94c637ad-ad43-4795-ed92-2903e27deb1d",
+        "id": "lEJmbRlBh2WD",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 34
-        },
-        "outputId": "94c637ad-ad43-4795-ed92-2903e27deb1d"
+        }
       },
       "source": [
         "# Groupby the household and figure out the number of unique values\n",
@@ -1876,7 +1886,7 @@
         "not_equal = all_equal[all_equal != True]\n",
         "print('There are {} households where the family members do not all have the same target.'.format(len(not_equal)))"
       ],
-      "execution_count": 26,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
@@ -1906,16 +1916,16 @@
       "metadata": {
         "id": "i_9ka8Ppf-IY",
         "colab_type": "code",
+        "outputId": "b94965af-afcc-4d40-96bc-72ab2c8bf8e9",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 204
-        },
-        "outputId": "b94965af-afcc-4d40-96bc-72ab2c8bf8e9"
+        }
       },
       "source": [
         "train[train['idhogar'] == not_equal.index[0]][['idhogar', 'parentesco1', 'Target']]"
       ],
-      "execution_count": 27,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2012,11 +2022,11 @@
       "metadata": {
         "id": "65KBe_uJgHNv",
         "colab_type": "code",
+        "outputId": "4c332f33-7374-43be-fdc1-914235253fd7",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 34
-        },
-        "outputId": "4c332f33-7374-43be-fdc1-914235253fd7"
+        }
       },
       "source": [
         "households_leader = train.groupby('idhogar')['parentesco1'].sum()\n",
@@ -2026,7 +2036,7 @@
         "\n",
         "print('There are {} households without a head.'.format(households_no_head['idhogar'].nunique()))"
       ],
-      "execution_count": 28,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
@@ -2042,18 +2052,18 @@
       "metadata": {
         "id": "8YSlNkJCg5tq",
         "colab_type": "code",
+        "outputId": "0692cc0b-8e5c-4d8f-cbd5-60789614be22",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 34
-        },
-        "outputId": "0692cc0b-8e5c-4d8f-cbd5-60789614be22"
+        }
       },
       "source": [
         "# Find households without a head and where labels are different\n",
         "households_no_head_equal = households_no_head.groupby('idhogar')['Target'].apply(lambda x: x.nunique() == 1)\n",
         "print('{} Households with no head have different labels.'.format(sum(households_no_head_equal == False)))"
       ],
-      "execution_count": 29,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
@@ -2063,19 +2073,6 @@
           "name": "stdout"
         }
       ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "id": "aRCvc_qag86U",
-        "colab_type": "code",
-        "colab": {}
-      },
-      "source": [
-        ""
-      ],
-      "execution_count": 0,
-      "outputs": []
     }
   ]
 }
