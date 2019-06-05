@@ -43,10 +43,10 @@
       "metadata": {
         "colab_type": "code",
         "id": "gJr_9dXGpJ05",
-        "outputId": "dd8d4f6e-5937-400b-b486-5ea086a78e1c",
+        "outputId": "a110fa12-152e-4557-932c-55128e354886",
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 119
+          "height": 136
         }
       },
       "source": [
@@ -62,7 +62,8 @@
             "remote: Counting objects: 100% (50/50), done.\u001b[K\n",
             "remote: Compressing objects: 100% (46/46), done.\u001b[K\n",
             "remote: Total 50 (delta 0), reused 0 (delta 0), pack-reused 0\u001b[K\n",
-            "Unpacking objects: 100% (50/50), done.\n"
+            "Unpacking objects: 100% (50/50), done.\n",
+            "fatal: destination path 'Machine-Learning--Projects' already exists and is not an empty directory.\n"
           ],
           "name": "stdout"
         }
@@ -73,7 +74,7 @@
       "metadata": {
         "id": "j8dyt_CQd01m",
         "colab_type": "code",
-        "outputId": "f541e58c-75fb-4316-8f3d-2f45bf86d553",
+        "outputId": "87ad77df-12c9-4381-86d9-11688baf1db2",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 34
@@ -98,7 +99,7 @@
       "metadata": {
         "id": "jCJkLdD9efmQ",
         "colab_type": "code",
-        "outputId": "768f09bc-443f-4bbf-ce6e-092c7256192f",
+        "outputId": "0efcc39e-b4c9-4ab4-9ca3-99482758d561",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 85
@@ -126,7 +127,7 @@
       "metadata": {
         "id": "VKOPw9KAenmf",
         "colab_type": "code",
-        "outputId": "02c20f2d-88c3-4758-9b2f-3a56a9bc18c7",
+        "outputId": "ac886dca-d654-4094-ede0-8bc5c5518517",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 34
@@ -197,7 +198,7 @@
       "metadata": {
         "id": "P1RN8vlTW9wi",
         "colab_type": "code",
-        "outputId": "6736c03e-14fd-4527-a19c-d4d194c356b9",
+        "outputId": "354bc9b5-b9c0-4353-c7f7-07b057a08ead",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 224
@@ -1293,7 +1294,7 @@
       "metadata": {
         "id": "-rGL9NmnXGfb",
         "colab_type": "code",
-        "outputId": "17601894-6590-464c-e870-293f60dc5159",
+        "outputId": "0cc52943-beaa-4439-8ddd-1927e7b38bc6",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 102
@@ -1334,7 +1335,7 @@
       "metadata": {
         "id": "3YPjVzYOXI0_",
         "colab_type": "code",
-        "outputId": "22edb65e-20f6-4a52-eee4-0de7e456d7de",
+        "outputId": "d8fa3e98-5702-4f80-9283-9ac9db471f92",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 102
@@ -1376,7 +1377,7 @@
       "metadata": {
         "id": "2j8iALy6YnJ6",
         "colab_type": "code",
-        "outputId": "37291f4f-cc75-4a37-9d13-ffb8ea813b01",
+        "outputId": "175df03a-7c9a-49b2-b5d3-61b76580c424",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 457
@@ -1435,7 +1436,7 @@
       "metadata": {
         "id": "0nkEx8RVaDT5",
         "colab_type": "code",
-        "outputId": "b2dd5a07-7b89-443c-8e13-148032c76264",
+        "outputId": "6ea7b4a1-dc23-40b4-d030-c6cfa23f8df1",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 2335
@@ -1493,7 +1494,7 @@
       "metadata": {
         "id": "sLnmYq9gaGgq",
         "colab_type": "code",
-        "outputId": "fa717e92-e71f-418d-d5ec-9cedc4faeab4",
+        "outputId": "0326222d-a42e-4ddb-9cba-10336d1ad5ef",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 204
@@ -1633,7 +1634,7 @@
       "metadata": {
         "id": "cll_z7IYcBSl",
         "colab_type": "code",
-        "outputId": "169a543f-60ba-4e91-9e9e-a068a6422f3a",
+        "outputId": "a981382b-41f7-42a0-fcf9-a0d52235f16a",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 297
@@ -1793,7 +1794,7 @@
       "metadata": {
         "id": "eNnozX62cn1m",
         "colab_type": "code",
-        "outputId": "af48ad0e-a9b6-4885-caf4-2d869f1d269a",
+        "outputId": "25fec8f2-3d35-43db-d86e-11c025f207af",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 611
@@ -1889,7 +1890,7 @@
       "cell_type": "code",
       "metadata": {
         "colab_type": "code",
-        "outputId": "7f3a2242-02ad-445e-c093-23fe578df7ac",
+        "outputId": "e2b2f024-db85-44b5-f096-9009dcbf1839",
         "id": "lEJmbRlBh2WD",
         "colab": {
           "base_uri": "https://localhost:8080/",
@@ -1934,7 +1935,7 @@
       "metadata": {
         "id": "i_9ka8Ppf-IY",
         "colab_type": "code",
-        "outputId": "f9399bac-da0c-4444-fc7b-8972d6160719",
+        "outputId": "15b6f9d1-00bd-4bb2-ec45-ed760cd1d929",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 204
@@ -2040,7 +2041,7 @@
       "metadata": {
         "id": "65KBe_uJgHNv",
         "colab_type": "code",
-        "outputId": "f5cf3c44-4145-42b0-836f-1ff5f32c9ec7",
+        "outputId": "6f8bb743-d8dd-41ac-c189-cc3f94fe865f",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 34
@@ -2070,7 +2071,7 @@
       "metadata": {
         "id": "8YSlNkJCg5tq",
         "colab_type": "code",
-        "outputId": "c0edd91f-9f3b-4641-8911-ef12ebfe082d",
+        "outputId": "1cdb477c-10c9-4861-f670-2e5378cc426a",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 34
@@ -2117,11 +2118,11 @@
       "metadata": {
         "id": "GeO7bfgUm61A",
         "colab_type": "code",
+        "outputId": "15d6bc2f-b4a3-42e7-bd66-aee69bb35169",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 359
-        },
-        "outputId": "1e246d3a-157e-422c-8547-b455094b4aa5"
+        }
       },
       "source": [
         "# Number of missing in each column\n",
@@ -2132,7 +2133,7 @@
         "\n",
         "missing.sort_values('percent', ascending = False).head(10)#.drop('Target')"
       ],
-      "execution_count": 23,
+      "execution_count": 22,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2232,7 +2233,7 @@
           "metadata": {
             "tags": []
           },
-          "execution_count": 23
+          "execution_count": 22
         }
       ]
     },
@@ -2323,16 +2324,16 @@
       "metadata": {
         "id": "XGDRcMmqpmlX",
         "colab_type": "code",
+        "outputId": "1016b9a5-3577-44ed-f5c6-91c7cc4cc223",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 449
-        },
-        "outputId": "4fb00c8c-67e8-4eb2-d654-61a48e7274f5"
+        }
       },
       "source": [
         "plot_value_counts(heads, 'v18q1')"
       ],
-      "execution_count": 25,
+      "execution_count": 24,
       "outputs": [
         {
           "output_type": "display_data",
@@ -2365,16 +2366,16 @@
       "metadata": {
         "id": "wFZcGW3Vpo1F",
         "colab_type": "code",
+        "outputId": "14c822bc-55c0-4dee-ef16-c204c93e0516",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 85
-        },
-        "outputId": "3eb1e3bf-3df7-4cde-ca79-10f51de80273"
+        }
       },
       "source": [
         "heads.groupby('v18q')['v18q1'].apply(lambda x: x.isnull().sum())\n"
       ],
-      "execution_count": 26,
+      "execution_count": 25,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2389,7 +2390,7 @@
           "metadata": {
             "tags": []
           },
-          "execution_count": 26
+          "execution_count": 25
         }
       ]
     },
@@ -2423,11 +2424,11 @@
       "metadata": {
         "id": "zKuiKmNnqzqZ",
         "colab_type": "code",
+        "outputId": "fc769ad8-86ec-40ef-a1a8-ab435473118b",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 657
-        },
-        "outputId": "010682ad-a875-4fe2-96ac-9b15cee6a5b5"
+        }
       },
       "source": [
         "# Variables indicating home ownership\n",
@@ -2443,7 +2444,7 @@
         "          rotation = 60)\n",
         "plt.title('Home Ownership Status for Households Missing Rent Payments', size = 18)"
       ],
-      "execution_count": 28,
+      "execution_count": 27,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2455,7 +2456,7 @@
           "metadata": {
             "tags": []
           },
-          "execution_count": 28
+          "execution_count": 27
         },
         {
           "output_type": "display_data",
@@ -2496,11 +2497,11 @@
       "metadata": {
         "id": "sb29FZMfrT6v",
         "colab_type": "code",
+        "outputId": "df21f1e4-1d15-4702-cb32-53adb6bbf5b2",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 68
-        },
-        "outputId": "9a4fab4b-e569-4efe-cb20-eb6edb0b1b3d"
+        }
       },
       "source": [
         "data.loc[(data['tipovivi1'] == 1), 'v2a1'] = 0\n",
@@ -2510,7 +2511,7 @@
         "\n",
         "data['v2a1-missing'].value_counts()"
       ],
-      "execution_count": 29,
+      "execution_count": 28,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2524,7 +2525,7 @@
           "metadata": {
             "tags": []
           },
-          "execution_count": 29
+          "execution_count": 28
         }
       ]
     },
@@ -2547,16 +2548,16 @@
       "metadata": {
         "id": "VWjcMPnPrwMj",
         "colab_type": "code",
+        "outputId": "bb98d188-e649-4fcc-976c-61019735165b",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 170
-        },
-        "outputId": "3ff9a3c1-9494-4355-9c1a-0797a7742ca5"
+        }
       },
       "source": [
         "data.loc[data['rez_esc'].notnull()]['age'].describe()\n"
       ],
-      "execution_count": 30,
+      "execution_count": 29,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2576,7 +2577,7 @@
           "metadata": {
             "tags": []
           },
-          "execution_count": 30
+          "execution_count": 29
         }
       ]
     },
@@ -2595,16 +2596,16 @@
       "metadata": {
         "id": "NKnp5RkGruAl",
         "colab_type": "code",
+        "outputId": "a95f20d7-8d75-477e-b994-b9e7c1e42546",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 170
-        },
-        "outputId": "2d1805d9-e58e-4a9c-d055-0c8f36d435d0"
+        }
       },
       "source": [
         "data.loc[data['rez_esc'].isnull()]['age'].describe()"
       ],
-      "execution_count": 31,
+      "execution_count": 30,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -2624,7 +2625,7 @@
           "metadata": {
             "tags": []
           },
-          "execution_count": 31
+          "execution_count": 30
         }
       ]
     },
