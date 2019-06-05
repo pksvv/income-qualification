@@ -1842,7 +1842,7 @@
         "colab_type": "text"
       },
       "source": [
-        "# Identifying errors, and Cleaning data"
+        "# Identifying errors first and creating a correction logic for each error"
       ]
     },
     {
@@ -1852,6 +1852,8 @@
         "colab_type": "text"
       },
       "source": [
+        "# 1\n",
+        "\n",
         "### first thing is checking and correcting whether all members of the house have the same poverty level."
       ]
     },
@@ -1859,6 +1861,213 @@
       "cell_type": "code",
       "metadata": {
         "id": "hjgnjtZCetzD",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "94c637ad-ad43-4795-ed92-2903e27deb1d"
+      },
+      "source": [
+        "# Groupby the household and figure out the number of unique values\n",
+        "all_equal = train.groupby('idhogar')['Target'].apply(lambda x: x.nunique() == 1)\n",
+        "\n",
+        "# Households where targets are not all equal\n",
+        "not_equal = all_equal[all_equal != True]\n",
+        "print('There are {} households where the family members do not all have the same target.'.format(len(not_equal)))"
+      ],
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "There are 85 households where the family members do not all have the same target.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7pQ_CPx-gCW8",
+        "colab_type": "text"
+      },
+      "source": [
+        "example of household where there are different individual poverty levels\n",
+        "\n",
+        "we can see below that the head of family \"parentescol\" has value 3 but there are some 2 values as well.\n",
+        "\n",
+        "Correct value here would be 3"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "i_9ka8Ppf-IY",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 204
+        },
+        "outputId": "b94965af-afcc-4d40-96bc-72ab2c8bf8e9"
+      },
+      "source": [
+        "train[train['idhogar'] == not_equal.index[0]][['idhogar', 'parentesco1', 'Target']]"
+      ],
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/html": [
+              "<div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>idhogar</th>\n",
+              "      <th>parentesco1</th>\n",
+              "      <th>Target</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>7651</th>\n",
+              "      <td>0172ab1d9</td>\n",
+              "      <td>0</td>\n",
+              "      <td>3</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>7652</th>\n",
+              "      <td>0172ab1d9</td>\n",
+              "      <td>0</td>\n",
+              "      <td>2</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>7653</th>\n",
+              "      <td>0172ab1d9</td>\n",
+              "      <td>0</td>\n",
+              "      <td>3</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>7654</th>\n",
+              "      <td>0172ab1d9</td>\n",
+              "      <td>1</td>\n",
+              "      <td>3</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>7655</th>\n",
+              "      <td>0172ab1d9</td>\n",
+              "      <td>0</td>\n",
+              "      <td>2</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>"
+            ],
+            "text/plain": [
+              "        idhogar  parentesco1  Target\n",
+              "7651  0172ab1d9            0       3\n",
+              "7652  0172ab1d9            0       2\n",
+              "7653  0172ab1d9            0       3\n",
+              "7654  0172ab1d9            1       3\n",
+              "7655  0172ab1d9            0       2"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "j8RrbrxpgmWm",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 2\n",
+        "\n",
+        "### checking families where head of household data is not present and the members of that household might have differing labels attached to them"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "65KBe_uJgHNv",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "4c332f33-7374-43be-fdc1-914235253fd7"
+      },
+      "source": [
+        "households_leader = train.groupby('idhogar')['parentesco1'].sum()\n",
+        "\n",
+        "# Find households without a head\n",
+        "households_no_head = train.loc[train['idhogar'].isin(households_leader[households_leader == 0].index), :]\n",
+        "\n",
+        "print('There are {} households without a head.'.format(households_no_head['idhogar'].nunique()))"
+      ],
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "There are 15 households without a head.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "8YSlNkJCg5tq",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "0692cc0b-8e5c-4d8f-cbd5-60789614be22"
+      },
+      "source": [
+        "# Find households without a head and where labels are different\n",
+        "households_no_head_equal = households_no_head.groupby('idhogar')['Target'].apply(lambda x: x.nunique() == 1)\n",
+        "print('{} Households with no head have different labels.'.format(sum(households_no_head_equal == False)))"
+      ],
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "0 Households with no head have different labels.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "aRCvc_qag86U",
         "colab_type": "code",
         "colab": {}
       },
