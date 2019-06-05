@@ -35,9 +35,7 @@
       "source": [
         "## Getting Started\n",
         "\n",
-        "The document you are reading is a  [Jupyter notebook](https://jupyter.org/), hosted in Colaboratory. It is not a static page, but an interactive environment that lets you write and execute code in Python and other languages.\n",
-        "\n",
-        "For example, here is a **code cell** with a short Python script that computes a value, stores it in a variable, and prints the result:"
+        "Extracting the dataset"
       ]
     },
     {
@@ -45,7 +43,7 @@
       "metadata": {
         "colab_type": "code",
         "id": "gJr_9dXGpJ05",
-        "outputId": "251cd3b5-ccc6-44a5-8cb5-2e53144c7a13",
+        "outputId": "c77c1762-01d3-42e1-c24a-353e4a37c020",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 119
@@ -54,7 +52,7 @@
       "source": [
         "!git clone https://github.com/Simplilearn-Edu/Machine-Learning--Projects.git"
       ],
-      "execution_count": 1,
+      "execution_count": 4,
       "outputs": [
         {
           "output_type": "stream",
@@ -63,7 +61,7 @@
             "remote: Enumerating objects: 50, done.\u001b[K\n",
             "remote: Counting objects: 100% (50/50), done.\u001b[K\n",
             "remote: Compressing objects: 100% (46/46), done.\u001b[K\n",
-            "remote: Total 50 (delta 0), reused 0 (delta 0), pack-reused 0\n",
+            "remote: Total 50 (delta 0), reused 0 (delta 0), pack-reused 0\u001b[K\n",
             "Unpacking objects: 100% (50/50), done.\n"
           ],
           "name": "stdout"
@@ -75,16 +73,16 @@
       "metadata": {
         "id": "j8dyt_CQd01m",
         "colab_type": "code",
+        "outputId": "a80ce6c7-08a7-47ea-817d-f2e1aef897ad",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 34
-        },
-        "outputId": "4c40b7b0-c1d6-4bb2-b5a1-4000818c702e"
+        }
       },
       "source": [
         "!ls Machine-Learning--Projects/Projects/'Projects for Submission'/'Project 2 - Income Qualification'"
       ],
-      "execution_count": 7,
+      "execution_count": 5,
       "outputs": [
         {
           "output_type": "stream",
@@ -100,16 +98,16 @@
       "metadata": {
         "id": "jCJkLdD9efmQ",
         "colab_type": "code",
+        "outputId": "a95f5b9b-2f7e-4059-c396-92be0224d1cb",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 85
-        },
-        "outputId": "102ba251-0045-46e9-8344-718a732ab1d1"
+        }
       },
       "source": [
         "!unzip Machine-Learning--Projects/Projects/'Projects for Submission'/'Project 2 - Income Qualification'/'Dataset for the project.zip'"
       ],
-      "execution_count": 8,
+      "execution_count": 6,
       "outputs": [
         {
           "output_type": "stream",
@@ -128,17 +126,17 @@
       "metadata": {
         "id": "VKOPw9KAenmf",
         "colab_type": "code",
+        "outputId": "a1c96d23-2d01-4b7c-d2ca-ddd351e8e921",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 34
-        },
-        "outputId": "c14e7402-ee48-472f-9b7e-f0327c3e51ce"
+        }
       },
       "source": [
-        "#!mv 'Dataset for the project' data\n",
+        "!mv 'Dataset for the project' data\n",
         "!ls data"
       ],
-      "execution_count": 14,
+      "execution_count": 7,
       "outputs": [
         {
           "output_type": "stream",
@@ -152,99 +150,15 @@
     {
       "cell_type": "code",
       "metadata": {
+        "id": "MAQ0JjewWZx7",
         "colab_type": "code",
-        "id": "-gE-Ez1qtyIA",
-        "outputId": "8d2e4259-4682-4e19-b683-7b9087f28820",
-        "colab": {
-          "height": 35
-        }
+        "colab": {}
       },
       "source": [
-        "seconds_in_a_week = 7 * seconds_in_a_day\n",
-        "seconds_in_a_week"
+        ""
       ],
       "execution_count": 0,
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "data": {
-            "text/plain": [
-              "604800"
-            ]
-          },
-          "metadata": {
-            "tags": []
-          },
-          "execution_count": 0
-        }
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "colab_type": "text",
-        "id": "lSrWNr3MuFUS"
-      },
-      "source": [
-        "For more information about working with Colaboratory notebooks, see [Overview of Colaboratory](/notebooks/basic_features_overview.ipynb).\n"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "colab_type": "text",
-        "id": "-Rh3-Vt9Nev9"
-      },
-      "source": [
-        "## More Resources\n",
-        "\n",
-        "Learn how to make the most of Python, Jupyter, Colaboratory, and related tools with these resources:\n",
-        "\n",
-        "### Working with Notebooks in Colaboratory\n",
-        "- [Overview of Colaboratory](/notebooks/basic_features_overview.ipynb)\n",
-        "- [Guide to Markdown](/notebooks/markdown_guide.ipynb)\n",
-        "- [Importing libraries and installing dependencies](/notebooks/snippets/importing_libraries.ipynb)\n",
-        "- [Saving and loading notebooks in GitHub](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)\n",
-        "- [Interactive forms](/notebooks/forms.ipynb)\n",
-        "- [Interactive widgets](/notebooks/widgets.ipynb)\n",
-        "\n",
-        "### Working with Data\n",
-        "- [Loading data: Drive, Sheets, and Google Cloud Storage](/notebooks/io.ipynb) \n",
-        "- [Charts: visualizing data](/notebooks/charts.ipynb)\n",
-        "- [Getting started with BigQuery](/notebooks/bigquery.ipynb)\n",
-        "\n",
-        "### Machine Learning Crash Course\n",
-        "These are a few of the notebooks from Google's online Machine Learning course. See the [full course website](https://developers.google.com/machine-learning/crash-course/) for more.\n",
-        "- [Intro to Pandas](/notebooks/mlcc/intro_to_pandas.ipynb)\n",
-        "- [Tensorflow concepts](/notebooks/mlcc/tensorflow_programming_concepts.ipynb)\n",
-        "- [First steps with TensorFlow](/notebooks/mlcc/first_steps_with_tensor_flow.ipynb)\n",
-        "- [Intro to neural nets](/notebooks/mlcc/intro_to_neural_nets.ipynb)\n",
-        "- [Intro to sparse data and embeddings](/notebooks/mlcc/intro_to_sparse_data_and_embeddings.ipynb)\n",
-        "\n",
-        "### Using Accelerated Hardware\n",
-        "- [TensorFlow with GPUs](/notebooks/gpu.ipynb)\n",
-        "- [TensorFlow with TPUs](/notebooks/tpu.ipynb)"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "colab_type": "text",
-        "id": "P-H6Lw1vyNNd"
-      },
-      "source": [
-        "## Machine Learning Examples: Seedbank\n",
-        "\n",
-        "To see end-to-end examples of the interactive machine learning analyses that Colaboratory makes possible, check out the [Seedbank](https://research.google.com/seedbank/) project.\n",
-        "\n",
-        "A few featured examples:\n",
-        "\n",
-        "- [Neural Style Transfer](https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras): Use deep learning to transfer style between images.\n",
-        "- [EZ NSynth](https://research.google.com/seedbank/seed/ez_nsynth): Synthesize audio with WaveNet auto-encoders.\n",
-        "- [Fashion MNIST with Keras and TPUs](https://research.google.com/seedbank/seed/fashion_mnist_with_keras_and_tpus): Classify fashion-related images with deep learning.\n",
-        "- [DeepDream](https://research.google.com/seedbank/seed/deepdream): Produce DeepDream images from your own photos.\n",
-        "- [Convolutional VAE](https://research.google.com/seedbank/seed/convolutional_vae): Create a generative model of handwritten digits."
-      ]
+      "outputs": []
     }
   ]
 }
